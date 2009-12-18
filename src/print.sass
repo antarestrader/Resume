@@ -1,0 +1,86 @@
+@import blueprint.sass
+@import blueprint/modules/scaffolding.sass
+@import blueprint/modules/fancy_type
+@import compass/utilities.sass
+@import compass/reset.sass
+
++blueprint-typography
+
+body
+  font-size: 100%
+
+hr
+  +colruler
+  :background #000
+  :color #000
+  :height 10px
+  :margin 0 0 1.45em
+
+#container
+  +container
+  padding: 37px
+  padding-top: 36px
+  margin-top: 36px
+
+img
+  +column(4,"last")
+  border: solid 2px #333
+
+#personal
+  +column(19)
+  :padding-top 2em
+  h1
+    font-family: Georgia,serif
+    font-size: 400%
+  p + P
+    margin-top: -1.5em
+  #contact
+    +column(18)
+    +prepend(1)
+    .address, .phone, .email
+      +column(6)
+    .email
+      +last
+      a
+        color: #333
+        text-decoration: none
+      a:hover
+        color: #0c246a
+        text-decoration: underline
+          
+
+#attributes
+  +column(5)
+  +border
+  ul
+    +no-bullet
+    li
+      margin-left: -4em
+      margin-bottom: 36px
+      text-align: right
+      +alt
+      font-style: italic
+      font-size: 133%
+  
+#main
+  +column(18, "last")
+  .section
+    +clearfix
+    h2
+      +column(6)
+      margin-top: .3em
+      font-size: 166.67%
+      line-height: 2
+      text-align: right
+    p,ul
+      +column(12, "last")
+    ul
+      +no-bullet
+      li
+        :text-indent -3em
+        margin-left: 3em
+  
+#footer
+  +quiet
+  font-size: 85%
+  text-align: center
